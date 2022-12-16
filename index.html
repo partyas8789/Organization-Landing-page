@@ -1,0 +1,1556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 98vw;
+            height: 6500px;
+            /* border: 2px solid red; */
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        .upperdiv{
+            width: 100%;
+            height: 800px;
+            /* border:2px solid red; */
+            background-color: #e3f7fa;
+        }
+        .upperdivheader{
+            width: 100%;
+            height: 100px;
+            /* border: 2px solid red; */
+            display: flex;
+        }
+        .upperdivheaderleft, .upperdivheadermiddle, .upperdivheaderright{
+            height: 100%;
+            width: 33%;
+            display: flex;
+            /* border: 2px solid red; */
+        }
+        .upperdivheaderleft{
+            align-items: center;
+            justify-content: center;
+        }
+        .upperdivheaderleftdiv{
+            height: 70%;
+            width: 50%;
+            display: flex;
+            align-items: center;
+            /* border: 2px solid red; */
+        }
+        .upperdivheaderright{
+            align-items: center;
+            justify-content: flex-end;
+        }
+        .upperdivheaderrightdiv{
+            height: 50%;
+            width: 30%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* border: 2px solid red; */
+            background-color:#fcf2e8;
+        }
+        .upperdivheadermiddlediv{
+            height: 100%;
+            width: 25%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* border: 2px solid red; */
+        }
+        select{
+            border: none;
+            background-color: #e3f7fa;
+        }
+        .upperdivmain{
+            width: 100%;
+            height: 700px;
+            display: flex;
+            /* border: 2px solid green; */
+        }
+        .upperdivmainleft{
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* border: 2px solid green; */
+        }
+        .upperdivmainleft1{
+            width: 70%;
+            height: 10%;
+            display: flex;
+            align-items: center;
+            margin-top: 1rem;
+            /* border: 2px solid red; */
+        }
+        .upperdivmainleft2{
+            width: 70%;
+            height: 20%;
+            margin-top: 1rem;
+            /* border: 2px solid red; */
+        }
+        .upperdivmainleft2 h1{
+            font-size: 45px;
+        }
+        .upperdivmainleft3{
+            width: 70%;
+            height: 20%;
+            margin-top: 1rem;
+            /* border: 2px solid red; */
+        }
+        .upperdivmainleft4{
+            width: 70%;
+            height: 10%;
+            display: flex;
+            align-items: center;
+            margin-top: 1rem;
+            background-color: #ffffff;
+            /* border: 2px solid red; */
+        }
+        .upperdivmainleft4 input{
+            width: 90%;
+            height: 100%;
+            border: none;
+        }
+        .upperdivmainleft5{
+            width: 70%;
+            height: 10%;
+            display: flex;
+            align-items: center;
+            margin-top: 1rem;
+            /* border: 2px solid red; */
+        }
+        .upperdivmainright{
+            width: 50%;
+            height: 100%;
+        }
+        .secondpart{
+            width: 100%;
+            height: 700px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* border: 2px solid green; */
+        }
+        .secondpartupper{
+            width: 100%;
+            height: 20%;
+            /* border: 2px solid green; */
+        }
+        .secondpartupperpara{
+            width: 100%;
+            height: 50%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            /* border: 2px solid green; */
+        }
+        .secondpartupperparap{
+            justify-content: flex-end;
+        }
+        .secondpartlower{
+            width: 90%;
+            height: 80%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* border: 2px solid rgb(117, 154, 117); */
+        }
+        .secondpartlowerdiv{
+            width: 32%;
+            height: 80%;
+            box-shadow: 0px 0px 3px;
+            /* border: 2px solid green; */
+        }
+        .secondpartlowerdivvideo{
+            width: 100%;
+            height: 60%;
+            /* border: 2px solid green; */
+        }
+        .secondpartlowerdivstar{
+            width: 100%;
+            height: 10%;
+            display: flex;
+            align-items: center;
+            /* border: 2px solid green; */
+        }
+        .secondpartlowerdivpara{
+            width: 100%;
+            height: 20%;
+            /* border: 2px solid green; */
+        }
+        .secondpartlowerdivpara h3{
+            padding-top: 1rem;
+            font-size: 20px;
+        }
+        .secondpartlowerdivwatched{
+            width: 100%;
+            height: 10%;
+            display: flex;
+            align-items: center;
+            /* border: 2px solid green; */
+        }
+        .thirdpart{
+            width: 100%;
+            height: 600px;
+            display: flex;
+            /* border: 2px solid green; */
+        }
+        .thirdpartleftside{
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            background-color: #f7f8fb;
+            /* border: 2px solid green; */
+        }
+        .thirdpartleftsideleft, .thirdpartleftsideright{
+            width: 50%;
+            height: 90%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* border: 2px solid red; */
+        }
+        .thirdpartleftsideleft{
+            margin-top: 3rem;
+        }
+        .thirdpartleftsiderightdiv{
+            width: 80%;
+            height: 40%;
+            margin-top: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            box-shadow: 0px 0px 2px;
+            /* border: 2px solid red; */
+        }
+        .thirdpartleftsideleftdiv{
+            width: 80%;
+            height: 40%;
+            margin-top: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0px 0px 2px;
+            background-color: white;
+            /* border: 2px solid red; */
+        }
+        .thirdpartleftsideleftdivall{
+            width: 100%;
+            height: 25%;
+            /* border: 2px solid red; */
+        }
+        .thirdpartleftsideleftdivupper{
+            width: 60%;
+            height: 50%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            /* border: 2px solid red; */
+        }
+        .thirdpartleftsideleftdivlower{
+            width: 60%;
+            height: 50%;
+            /* border: 2px solid red; */
+        }
+        .thirdpartrightside{
+            width: 50%;
+            height: 100%;
+            background-color: #f7f8fb;
+            /* border: 2px solid green; */
+        }
+        .thirdpartleftside1, .thirdpartleftside2, .thirdpartleftside3, .thirdpartleftside4{
+            width: 80%;
+            height: 25%;
+            /* border: 2px solid red; */
+        }
+        .thirdpartleftside2 h1{
+            font-size: 40px;
+        }
+        .thirdpartleftside1{
+            display: flex;
+            align-items: flex-end;
+        }
+        .thirdpartleftside4{
+            display: flex;
+            /* align-items: center; */
+        }
+        .thirdpartleftside4buttom{
+            width: 30%;
+            height: 25%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #fcf2e8;
+            margin-top: .5rem;
+            /* border: 2px solid red; */
+        }
+        .forthpart{
+            width: 100%;
+            height: 1300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* border: 2px solid red; */
+        }
+        .forthpartupperdiv1,.forthpartupperdiv2{
+            width: 90%;
+            height: 50%;
+            display: flex;
+            justify-content: center;
+            /* border: 2px solid red; */
+
+        }
+        .forthpartupperdiv1{
+            align-items: flex-end;
+        }
+        .forthpartupperdiv2{
+            align-items: flex-start;
+        }
+        .forthpartlower{
+            width: 90%;
+            height: 80%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            /* border: 2px solid rgb(13, 169, 231); */
+        }
+        .forthpartlowerdiv,.forthpartupper{
+            width: 100%;
+            height: 18%;
+            display: flex;
+            align-items: center;
+            /* border: 2px solid rgb(13, 169, 231); */
+        }
+        .forthpartlowerdiv{
+            box-shadow: 0px 0px 1px;
+        }
+        .forthpartupper{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .forthpartlowerdivleft{
+            width: 10%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* border: 2px solid red; */
+        }
+        .forthpartlowerdivleftcircle{
+            width: 80px;
+            height: 80px;
+            /* border: 2px solid red; */
+            background-color: #fef8f2;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .forthpartlowerdivmiddle{
+            width: 70%;
+            height: 100%;
+            /* border: 2px solid red; */
+        }
+        .forthpartlowerdivmiddleupper,.forthpartlowerdivmiddlemiddle,.forthpartlowerdivmiddlelower{
+            width: 100%;
+            height: 33%;
+            display: flex;
+            align-items: center;
+            /* border: 2px solid red; */
+        }
+        .forthpartlowerdivright{
+            width: 20%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            /* border: 2px solid red; */
+        }
+        .forthpartlowerdivrightdivright{
+            width: 80%;
+            height: 20%;
+            display: flex;
+            /* border: 2px solid red; */
+        }
+        .forthpartlowerdivrightdivrightleft{
+            width: 70%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            background-color: #3fdbb1;
+            /* border-right: 2px solid white; */
+        }
+        .forthpartlowerdivrightdivrightright{
+            width: 30%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            background-color: #3fdbb1;
+            /* border: 2px solid red; */
+        }
+        .forthpartlowerdivrightdivleft{
+            width: 20%;
+            height: 20%;
+            display: flex;
+            align-items: center;
+            /* border: 2px solid red; */
+        }
+        .forthpartlowerdiv2{
+            width: 100%;
+            height: 38%;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0px 0px 1px;
+            /* border: 2px solid red; */
+        }
+        .forthpartlowerdiv2upper,.forthpartlowerdiv2lower{
+            width: 100%;
+            height: 50%;
+            /* border: 2px solid gray; */
+        }
+        .forthpartlowerdiv2lower{
+            margin-left: 8rem;
+
+        }
+        .forthpartlowerdiv2lowerbox{
+            width: 80%;
+            height: 100%;
+            display: flex;
+            /* border: 2px solid gray; */
+        }
+        .forthpartlowerdiv2lowerboxleft{
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            /* border: 2px solid gray; */
+        }
+        .forthpartlowerdiv2lowerboxleftupper{
+            width: 100%;
+            height: 50%;
+            display: flex;
+            align-items: center;
+            /* border: 2px solid gray; */
+        }
+        .forthpartlowerdiv2lowerboxleftlower{
+            width: 100%;
+            height: 50%;
+            display: flex;
+            align-items: center;
+            /* border: 2px solid gray; */
+        }
+        .forthpartlowerdiv2lowerboxright{
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            /* border: 2px solid gray; */
+        }
+        .forthpartlowerdiv2lowerboxrightupper{
+            width: 100%;
+            height: 50%;
+            display: flex;
+            align-items: center;
+            /* border: 2px solid gray; */
+        }
+        .forthpartlowerdiv2lowerboxrightlower{
+            width: 100%;
+            height: 50%;
+            display: flex;
+            align-items: center;
+            /* border: 2px solid gray; */
+        }
+        .forthpartlowerdiv2upper{
+            display: flex;
+        }
+        .fifthpart{
+            width: 100%;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #ecf8ff;
+            /* border: 2px solid red; */
+        }
+        .fifthpartupper{
+            width: 100%;
+            height: 30%;
+            /* border: 2px solid red; */
+        }
+        .fifthpartupperfirst{
+            width: 100%;
+            height: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            /* border: 2px solid red; */
+        }
+        .fifthpartuppersecond{
+            width: 100%;
+            height: 50%;
+            display: flex;
+            justify-content: center;
+            /* border: 2px solid red; */
+        }
+        .fifthpartlower{
+            width: 90%;
+            height: 70%;
+            display: flex;
+            /* border: 2px solid red; */
+        }
+        .fifthpartlowerside{
+            width: 25%;
+            height: 100%;
+            /* border: 2px solid red; */
+        }
+        .sixthpart{
+            width: 100%;
+            height: 700px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            /* border: 2px solid red; */
+        }
+        .sixthpartupper{
+            width: 100%;
+            height: 30%;
+            display: flex;
+            flex-direction: column;
+            /* border: 2px solid red; */
+        }
+        .sixthpartupperupper{
+            width: 100%;
+            height: 30%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* border: 2px solid red; */
+        }
+        .sixthpartuppermiddle{
+            width: 100%;
+            height: 30%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* border: 2px solid red; */
+        }
+        .sixthpartupperlower{
+            width: 100%;
+            height: 40%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* border: 2px solid red; */
+        }
+        .sixthpartupperlowerdiv{
+            width: 20%;
+            height: 80%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            /* border: 2px solid red; */
+            background-color: #f7f8fb;
+        }
+        .sixthpartupperlowerdivleft{
+            width: 45%;
+            height: 90%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* border: 2px solid red; */
+            background-color: #ffffff;
+        }
+        .sixthpartupperlowerdivright{
+            width: 45%;
+            height: 90%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* border: 2px solid red; */
+        }
+        .sixthpartlower{
+            width: 80%;
+            height: 70%;
+            display: flex;
+            justify-content: space-between;
+            /* border: 2px solid red; */
+        }
+        .sixthpartlowerleft{
+            width: 40%;
+            height: 100%;
+            padding-left: 1rem;
+            /* border: 2px solid red; */
+            box-shadow: 0px 0px 1px;
+        }
+        .sixthpartlowerleftdiv{
+            width: 100%;
+            height: 10%;
+            display: flex;
+            align-items: center;
+            /* border: 2px solid red; */
+        }
+        .sixthpartlowerleftdivbox{
+            width: 25%;
+            height: 80%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ef9e48;
+            /* border: 2px solid red; */
+        }
+        .sixthpartlowerleftdiv1{
+            width: 100%;
+            height: 20%;
+            /* border: 2px solid red; */
+        }
+        .sixthpartlowerleftdiv11{
+            width: 100%;
+            height: 50%;
+            display: flex;
+            align-items: center;
+            /* border: 2px solid red; */
+        }
+        .sixthpartlowerleftdiv11right{
+            width: 50%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            /* border: 2px solid red; */
+        }
+        .sixthpartlowerleftdiv2{
+            width: 100%;
+            height: 20%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* border: 2px solid red; */
+        }
+        .sixthpartlowerleftdiv2box{
+            width: 30%;
+            height: 40%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #fcf2e8;
+            /* border: 2px solid red; */
+        }
+        .sixthpartlowerright{
+            width: 50%;
+            height: 100%;
+            border: 2px solid green;
+            padding-left: 1rem;
+        }
+        .seventhpart{
+            width: 100%;
+            height: 400px;
+            display: flex;
+            /* border: 2px solid rgb(15, 13, 13); */
+        }
+        .seventhpartleft{
+            width: 60%;
+            height: 100%;
+            /* border: 2px solid rgb(15, 13, 13); */
+        }
+        .seventhpartright{
+            width: 30%;
+            height: 100%;
+            /* border: 2px solid green; */
+        }
+        .seventhpartrightdiv{
+            width: 100%;
+            height: 10%;
+            /* border: 2px solid rgb(15, 13, 13);  */
+        }
+        .seventhpartrightdiv1{
+            width: 100%;
+            height: 20%;
+            display: flex;
+            align-items: center;
+            /* border: 2px solid rgb(15, 13, 13);  */
+        }
+        .seventhpartrightdiv1box{
+            width: 30%;
+            height: 80%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fcf2e8;
+            /* border: 2px solid rgb(15, 13, 13);  */
+        }
+        .eighthpart{
+            width: 100%;
+            height: 600px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* border: 2px solid rgb(15, 13, 13);   */
+        }
+        .eighthpartdiv1{
+            width: 80%;
+            height: 10%;
+            display: flex;
+            justify-content: center;
+            /* align-items: center; */
+            /* border: 2px solid rgb(15, 13, 13);   */
+        }
+        .eighthpartdiv1c{
+            align-items: flex-end;
+        }
+        .eighthpartdiv{
+            width: 80%;
+            height: 10%;
+            display: flex;
+            align-items: center;
+            /* border: 2px solid rgb(15, 13, 13);   */
+        }
+        .eighthpartdivpara{
+            width: 77%;
+            height: 20%;
+            /* border: 2px solid rgb(15, 13, 13);  */
+        }
+        .eighthpartdivpara1{
+            width: 100%;
+            height: 50%;
+            display: flex;
+            flex-direction: column;
+            /* border: 2px solid rgb(15, 13, 13);  */
+        }
+        .eighthpartdivpara12{
+            width: 100%;
+            height: 50%;
+            /* border: 2px solid rgb(15, 13, 13);  */
+        }
+        .ninthpart{
+            width: 100%;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            /* border: 2px solid rgb(15, 13, 13);   */
+        }
+        .ninthpartupper{
+            width: 100%;
+            height: 30%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* border: 2px solid rgb(15, 13, 13);   */
+        }
+        .ninthpartmiddle{
+            width: 100%;
+            height: 30%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* border: 2px solid rgb(15, 13, 13);   */
+        }
+        .ninthpartlower{
+            width: 100%;
+            height: 40%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* border: 2px solid rgb(15, 13, 13);   */
+        }
+        .ninthpartlowerbox{
+            width: 15%;
+            height: 80%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #fcf2ed;
+            /* border: 2px solid rgb(15, 13, 13);   */
+        }
+        .extra{
+            width: 100%;
+            height: 100px;
+        }
+        hr{
+            width: 75%;
+            margin-left: 7rem;
+        }
+        .footer{
+            width: 80%;
+            height: 300px;
+            margin-left: 7rem;
+            display: flex;
+            /* border: 2px solid red; */
+        }
+        .footerdiv{
+            height: 100%;
+            width: 25%;
+            /* border: 2px solid red; */
+        }
+        .footerdivpara{
+            height: 12%;
+            width: 100%;
+            /* border: 2px solid red; */
+        }
+    </style>
+</head>
+<body>
+    <div class="upperdiv">
+        <div class="upperdivheader">
+            <div class="upperdivheaderleft">
+                <div class="upperdivheaderleftdiv">
+                    <img width="40%" height="80%" src="./mctking.png" alt="">
+                    <h3>Landguru</h3>
+                </div>
+            </div>
+            <div class="upperdivheadermiddle">
+                <div class="upperdivheadermiddlediv">
+                    <p>Home</p>
+                </div>
+                <div class="upperdivheadermiddlediv">
+                    <select name="" id="">
+                        <option value="">Adversite</option>
+                    </select>
+                </div>
+                <div class="upperdivheadermiddlediv">
+                    <select name="" id="">
+                        <option value="">Supports</option>
+                    </select>
+                </div>
+                <div class="upperdivheadermiddlediv">
+                    <p>Contact</p>
+                </div>
+            </div>
+            <div class="upperdivheaderright">
+                <div class="upperdivheaderrightdiv">
+                    <p style="color: #ef9e48;">Try for free</p>
+                </div>
+            </div>
+        </div>
+        <div class="upperdivmain">
+            <div class="upperdivmainleft">
+                <div class="upperdivmainleft1">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                    <p>trused by over 4,332 students</p>
+                </div>
+                <div class="upperdivmainleft2">
+                    <h1>Learn Design with Nia Matos</h1>
+                </div>
+                <div class="upperdivmainleft3">
+                    <br>
+                    <p>Get your blood tests delivered at let home collect sample </p><br>
+                    <p>from the victory of the managments that supplies best</p><br>
+                    <p> design system guidelines ever.</p>
+                </div>
+                <div class="upperdivmainleft4">
+                    <input type="search" name="" id="" placeholder="Search course Name">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </div>
+                <div class="upperdivmainleft5">
+                    <p>sponsored by:</p>&nbsp;&nbsp;&nbsp;
+                    <i class="fa fa-paypal" aria-hidden="true"></i>&nbsp;
+                    <p>Paypal</p>&nbsp;&nbsp;&nbsp;
+                    <p>Google</p>&nbsp;&nbsp;&nbsp;
+                    <i class="fa fa-dropbox" aria-hidden="true"></i>&nbsp;
+                    <p>Dropbox</p>
+                    
+                </div>
+            </div>
+            <div class="upperdivmainright">
+                <img src="./mct1.png" height="100%" width="100%" alt="">
+                
+            </div>
+        </div>
+    </div>
+    <div class="extra"></div>
+    <div class="secondpart">
+        <div class="secondpartupper">
+            <div class="secondpartupperpara secondpartupperparap">
+                <p style="color: #ef9e48;">QUALITY FEATURES</p>
+            </div>
+            <div class="secondpartupperpara">
+                <h1>Tutorials that people love most</h1>
+            </div>
+        </div>
+        <div class="secondpartlower">
+            <div class="secondpartlowerdiv">
+                <div class="secondpartlowerdivvideo">
+                    <img src="./mct2.png" width="100%" height="100%" alt="">
+                </div>
+                <div class="secondpartlowerdivstar">
+                    &nbsp;&nbsp;&nbsp;&nbsp;<i style="color: #ef9e48;" class="fa fa-star" aria-hidden="true"></i>
+                    <i style="color: #ef9e48;" class="fa fa-star" aria-hidden="true"></i>
+                    <i style="color: #ef9e48;" class="fa fa-star" aria-hidden="true"></i>
+                    <i style="color: #ef9e48;" class="fa fa-star" aria-hidden="true"></i>
+                    <i style="color: #ef9e48;" class="fa fa-star" aria-hidden="true"></i>
+                    <p>&nbsp;5.0(392 reviews)</p>
+                </div>
+                <div class="secondpartlowerdivpara">
+                    <h3>&nbsp;&nbsp;&nbsp;&nbsp;How to work with prototype design </h3>
+                    <h3>&nbsp;&nbsp;&nbsp;&nbsp;with adobe xd featuring tools</h3>
+                </div>
+                <div class="secondpartlowerdivwatched">
+                    &nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-eye" aria-hidden="true"></i>
+                    <p>&nbsp;2,538 student watched</p>
+                </div>
+            </div>
+            <div class="secondpartlowerdiv">
+                <div class="secondpartlowerdivvideo">
+                    <img src="./mct3.png" width="100%" height="100%" alt="">
+                </div>
+                <div class="secondpartlowerdivstar">
+                    &nbsp;&nbsp;&nbsp;&nbsp;<i style="color: #ef9e48;" class="fa fa-star" aria-hidden="true"></i>
+                    <i style="color: #ef9e48;" class="fa fa-star" aria-hidden="true"></i>
+                    <i style="color: #ef9e48;" class="fa fa-star" aria-hidden="true"></i>
+                    <i style="color: #ef9e48;" class="fa fa-star" aria-hidden="true"></i>
+                    <i style="color: #ef9e48;" class="fa fa-star-o" aria-hidden="true"></i>
+                    <p>&nbsp;4.5(524 reviews)</p>
+                </div>
+                <div class="secondpartlowerdivpara">
+                    <h3>&nbsp;&nbsp;&nbsp;&nbsp;Create multiple artboard by using </h3>
+                    <h3>&nbsp;&nbsp;&nbsp;&nbsp;figma prototyping tools development</h3>
+                </div>
+                <div class="secondpartlowerdivwatched">
+                    &nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-eye" aria-hidden="true"></i>
+                    <p>&nbsp;3,532 student watched</p>
+                </div>
+            </div>
+            <div class="secondpartlowerdiv">
+                <div class="secondpartlowerdivvideo">
+                    <img src="./mct4.png" width="100%" height="100%" alt="">
+                </div>
+                <div class="secondpartlowerdivstar">
+                    &nbsp;&nbsp;&nbsp;&nbsp;<i style="color: #ef9e48;" class="fa fa-star" aria-hidden="true"></i>
+                    <i style="color: #ef9e48;" class="fa fa-star" aria-hidden="true"></i>
+                    <i style="color: #ef9e48;" class="fa fa-star" aria-hidden="true"></i>
+                    <i style="color: #ef9e48;" class="fa fa-star" aria-hidden="true"></i>
+                    <i style="color: #ef9e48;" class="fa fa-star" aria-hidden="true"></i>
+                    <p>&nbsp;5.0(392 reviews)</p>
+                </div>
+                <div class="secondpartlowerdivpara">
+                    <h3>&nbsp;&nbsp;&nbsp;&nbsp;Convert your web layout theming </h3>
+                    <h3>&nbsp;&nbsp;&nbsp;&nbsp;easily with sketch zeplin extension</h3>
+                </div>
+                <div class="secondpartlowerdivwatched">
+                    &nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-eye" aria-hidden="true"></i>
+                    <p>&nbsp;1,037 student watched</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="thirdpart">
+        <div class="thirdpartleftside">
+            <div class="thirdpartleftsideleft">
+                <div class="thirdpartleftsideleftdiv">
+                    <div class="thirdpartleftsideleftdivupper">
+                        <h1 style="color: #ef9e48;">80K+</h1>
+                    </div>
+                    <div class="thirdpartleftsideleftdivlower">
+                        <p>We have more than </p>
+                        <p>&nbsp; &nbsp; &nbsp; &nbsp; student</p>
+                    </div>
+                </div>
+                <div class="thirdpartleftsideleftdiv">
+                    <div class="thirdpartleftsideleftdivupper">
+                        <h1 style="color: #fa578e;">90+</h1>
+                    </div>
+                    <div class="thirdpartleftsideleftdivlower">
+                        <p>Daily updated blog  </p>
+                        <p>&nbsp; &nbsp; &nbsp; &nbsp; post maintain</p>
+                    </div>
+                </div>
+            </div>
+            <div class="thirdpartleftsideright">
+                <div class="thirdpartleftsiderightdiv">
+                    <div class="thirdpartleftsideleftdivupper">
+                        <h1 style="color: #ff753a;">150+</h1>
+                    </div>
+                    <div class="thirdpartleftsideleftdivlower">
+                        <p>Free online tutorials </p>
+                        <p>&nbsp; &nbsp;videos avaialble</p>
+                    </div>
+                </div>
+                <div class="thirdpartleftsiderightdiv">
+                    <div class="thirdpartleftsideleftdivupper">
+                        <h1 style="color: #e682ff;">&&nbsp;3M</h1>
+                    </div>
+                    <div class="thirdpartleftsideleftdivlower">
+                        <p>Job posted everydays </p>
+                        <p>&nbsp; with  qualification</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="thirdpartrightside">
+            <div class="thirdpartleftside1">
+                <div class="thirdpartleftside1first">
+                    <p style="color: #ef9e48;" >CORE FEATURE</p>
+                </div>
+                
+            </div>
+            <div class="thirdpartleftside2">
+                <h1>Smart Jackpots that you may love this anytime & anywhere</h1>
+            </div>
+            <div class="thirdpartleftside3">
+                <br>
+                <p>Get your tests delivered at let home collect sample</p><br>
+                <p>from the victory of the managments that supplies</p><br>
+                <p>best design system guidelines ever. Get your tests</p><br>
+                <p>delivered at let home collect sample.</p>
+            </div>
+            <div class="thirdpartleftside4">
+                <div class="thirdpartleftside4buttom">
+                    <p style="color: #ef9e48;">Explore details</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="forthpart">
+        <div class="forthpartupper">
+            <div class="forthpartupperdiv1">
+                <p style="color: #ef9e48;">QUALITY FEATURES</p>
+            </div>
+            <div class="forthpartupperdiv2">
+                <h1>Popular Designing Course</h1>
+            </div>
+        </div>
+        <div class="forthpartlower">
+            <div class="forthpartlowerdiv">
+                <div class="forthpartlowerdivleft">
+                    <div class="forthpartlowerdivleftcircle">
+                        <i style="color: #ef9e48;font-size: 60px;" class="fa fa-caret-right" id="abc" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="forthpartlowerdivmiddle">
+                    <div class="forthpartlowerdivmiddleupper">
+                        <i style="color: #ef9e48;" class="fa fa-star" aria-hidden="true"></i>
+                        <i style="color: #ef9e48;" class="fa fa-star" aria-hidden="true"></i>
+                        <i style="color: #ef9e48;" class="fa fa-star" aria-hidden="true"></i>
+                        <i style="color: #ef9e48;" class="fa fa-star" aria-hidden="true"></i>
+                        <i style="color: #ef9e48;" class="fa fa-star" aria-hidden="true"></i>
+                        <p>&nbsp; 5.0(392 reviews)&nbsp;&nbsp;&nbsp;</p>
+                        <i class="fa fa-eye" aria-hidden="true"></i>&nbsp;&nbsp;
+                        <p>2,538 students watched</p>
+                    </div>
+                    <div class="forthpartlowerdivmiddlemiddle">
+                        <h3>Professional graphic design tutorial full course with exercise file</h3>
+                    </div>
+                    <div class="forthpartlowerdivmiddlelower">
+                        <p>Get your tutorials delivered at let home collect sample from the victory of the managments.</p>
+                    </div>
+                </div>
+                <div class="forthpartlowerdivright">
+                    <div class="forthpartlowerdivrightdivright">
+                        <div class="forthpartlowerdivrightdivrightleft">
+                            <h4 style="color: white;">&nbsp;&nbsp;7 Video Classes</h4>
+                        </div>
+                        <div class="forthpartlowerdivrightdivrightright">
+                            <h4 style="color: white;">4 hrs</h4>
+                        </div>
+                    </div>
+                    <div class="forthpartlowerdivrightdivleft">
+                        <select style="background-color: white;" name="" id="" ></select>
+                    </div>
+                </div>
+            </div>
+            <div class="forthpartlowerdiv2">
+                <div class="forthpartlowerdiv2upper">
+                    <div class="forthpartlowerdivleft">
+                        <div class="forthpartlowerdivleftcircle">
+                            <i style="color: #ef9e48;font-size: 60px;" class="fa fa-caret-right" id="abc" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="forthpartlowerdivmiddle">
+                        <div class="forthpartlowerdivmiddleupper">
+                            <i style="color: #ef9e48;" class="fa fa-star" aria-hidden="true"></i>
+                            <i style="color: #ef9e48;" class="fa fa-star" aria-hidden="true"></i>
+                            <i style="color: #ef9e48;" class="fa fa-star" aria-hidden="true"></i>
+                            <i style="color: #ef9e48;" class="fa fa-star" aria-hidden="true"></i>
+                            <i style="color: #ef9e48;" class="fa fa-star" aria-hidden="true"></i>
+                            <p>&nbsp; 5.0(392 reviews)&nbsp;&nbsp;&nbsp;</p>
+                            <i class="fa fa-eye" aria-hidden="true"></i>&nbsp;&nbsp;
+                            <p>2,538 students watched</p>
+                        </div>
+                        <div class="forthpartlowerdivmiddlemiddle">
+                            <h3>Professional graphic design tutorial full course with exercise file</h3>
+                        </div>
+                        <div class="forthpartlowerdivmiddlelower">
+                            <p>Get your tutorials delivered at let home collect sample from the victory of the managments.</p>
+                        </div>
+                    </div>
+                    <div class="forthpartlowerdivright">
+                        <div class="forthpartlowerdivrightdivright">
+                            <div class="forthpartlowerdivrightdivrightleft">
+                                <h4 style="color: white;">&nbsp;&nbsp;7 Video Classes</h4>
+                            </div>
+                            <div class="forthpartlowerdivrightdivrightright">
+                                <h4 style="color: white;">4 hrs</h4>
+                            </div>
+                        </div>
+                        <div class="forthpartlowerdivrightdivleft">
+                            <select style="background-color: white;" name="" id="" ></select>
+                        </div>
+                    </div>
+                </div>
+                <div class="forthpartlowerdiv2lower">
+                    <div class="forthpartlowerdiv2lowerbox">
+                        <div class="forthpartlowerdiv2lowerboxleft">
+                            <div class="forthpartlowerdiv2lowerboxleftupper">
+                                <img width="10%" height="70%" src="./mctright.png" alt="">
+                                <p>How to reduce file pixel dimentions without loosing quality</p>
+                            </div>
+                            <div class="forthpartlowerdiv2lowerboxleftlower">
+                                <img width="10%" height="70%" src="./mctright.png" alt="">
+                                <p>How to reduce file pixel dimentions without loosing quality</p>
+                            </div>
+                        </div>
+                        <div class="forthpartlowerdiv2lowerboxright">
+                            <div class="forthpartlowerdiv2lowerboxrightupper">
+                                <img width="10%" height="70%" src="./mctright.png" alt="">
+                                <p>How to reduce file pixel dimentions without loosing quality</p>
+                            </div>
+                            <div class="forthpartlowerdiv2lowerboxrightlower">
+                                <img width="10%" height="70%" src="./mctright.png" alt="">
+                                <p>How to reduce file pixel dimentions without loosing quality</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="forthpartlowerdiv">
+                <div class="forthpartlowerdivleft">
+                    <div class="forthpartlowerdivleftcircle">
+                        <i style="color: #ef9e48;font-size: 60px;" class="fa fa-caret-right" id="abc" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="forthpartlowerdivmiddle">
+                    <div class="forthpartlowerdivmiddleupper">
+                        <i style="color: #ef9e48;" class="fa fa-star" aria-hidden="true"></i>
+                        <i style="color: #ef9e48;" class="fa fa-star" aria-hidden="true"></i>
+                        <i style="color: #ef9e48;" class="fa fa-star" aria-hidden="true"></i>
+                        <i style="color: #ef9e48;" class="fa fa-star" aria-hidden="true"></i>
+                        <i style="color: #ef9e48;" class="fa fa-star" aria-hidden="true"></i>
+                        <p>&nbsp; 5.0(392 reviews)&nbsp;&nbsp;&nbsp;</p>
+                        <i class="fa fa-eye" aria-hidden="true"></i>&nbsp;&nbsp;
+                        <p>2,538 students watched</p>
+                    </div>
+                    <div class="forthpartlowerdivmiddlemiddle">
+                        <h3>Professional graphic design tutorial full course with exercise file</h3>
+                    </div>
+                    <div class="forthpartlowerdivmiddlelower">
+                        <p>Get your tutorials delivered at let home collect sample from the victory of the managments.</p>
+                    </div>
+                </div>
+                <div class="forthpartlowerdivright">
+                    <div class="forthpartlowerdivrightdivright">
+                        <div class="forthpartlowerdivrightdivrightleft">
+                            <h4 style="color: white;">&nbsp;&nbsp;7 Video Classes</h4>
+                        </div>
+                        <div class="forthpartlowerdivrightdivrightright">
+                            <h4 style="color: white;">4 hrs</h4>
+                        </div>
+                    </div>
+                    <div class="forthpartlowerdivrightdivleft">
+                        <select style="background-color: white;" name="" id="" ></select>
+                    </div>
+                </div>
+            </div>
+            <div class="forthpartlowerdiv">
+                <div class="forthpartlowerdivleft">
+                    <div class="forthpartlowerdivleftcircle">
+                        <i style="color: #ef9e48;font-size: 60px;" class="fa fa-caret-right" id="abc" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="forthpartlowerdivmiddle">
+                    <div class="forthpartlowerdivmiddleupper">
+                        <i style="color: #ef9e48;" class="fa fa-star" aria-hidden="true"></i>
+                        <i style="color: #ef9e48;" class="fa fa-star" aria-hidden="true"></i>
+                        <i style="color: #ef9e48;" class="fa fa-star" aria-hidden="true"></i>
+                        <i style="color: #ef9e48;" class="fa fa-star" aria-hidden="true"></i>
+                        <i style="color: #ef9e48;" class="fa fa-star" aria-hidden="true"></i>
+                        <p>&nbsp; 5.0(392 reviews)&nbsp;&nbsp;&nbsp;</p>
+                        <i class="fa fa-eye" aria-hidden="true"></i>&nbsp;&nbsp;
+                        <p>2,538 students watched</p>
+                    </div>
+                    <div class="forthpartlowerdivmiddlemiddle">
+                        <h3>Professional graphic design tutorial full course with exercise file</h3>
+                    </div>
+                    <div class="forthpartlowerdivmiddlelower">
+                        <p>Get your tutorials delivered at let home collect sample from the victory of the managments.</p>
+                    </div>
+                </div>
+                <div class="forthpartlowerdivright">
+                    <div class="forthpartlowerdivrightdivright">
+                        <div class="forthpartlowerdivrightdivrightleft">
+                            <h4 style="color: white;">&nbsp;&nbsp;7 Video Classes</h4>
+                        </div>
+                        <div class="forthpartlowerdivrightdivrightright">
+                            <h4 style="color: white;">4 hrs</h4>
+                        </div>
+                    </div>
+                    <div class="forthpartlowerdivrightdivleft">
+                        <select style="background-color: white;" name="" id="" ></select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="extra"></div>
+    <div class="fifthpart">
+        <div class="fifthpartupper">
+            <div class="fifthpartupperfirst">
+                <p style="color: #ef9e48;">WHAT THE FUNCTION</p>
+            </div>
+            <div class="fifthpartuppersecond">
+                <h1>Let's see how it works</h1>
+            </div>
+        </div>
+        <div class="fifthpartlower">
+            <div class="fifthpartlowerside">
+                <img width="100%" src="./1mct.png" alt=""><br>
+                <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set disbursement</h3><br>
+                <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbspInstruction</h3><br>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbspGet your blood tests delivered at </p><br>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsphome collect a sample from the  </p><br>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbspyour blood tests.</p><br>
+            </div>
+            <div class="fifthpartlowerside">
+                <img width="100%" src="./2mct.png" alt=""><br>
+                <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set disbursement</h3><br>
+                <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbspInstruction</h3><br>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbspGet your blood tests delivered at </p><br>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsphome collect a sample from the  </p><br>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbspyour blood tests.</p><br>
+            </div>
+            <div class="fifthpartlowerside">
+                <img width="100%" src="./3mct.png" alt=""><br>
+                <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set disbursement</h3><br>
+                <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbspInstruction</h3><br>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbspGet your blood tests delivered at </p><br>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsphome collect a sample from the  </p><br>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbspyour blood tests.</p><br>
+            </div>
+            <div class="fifthpartlowerside">
+                <img width="100%" src="./4mct.png" alt=""><br>
+                <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set disbursement</h3><br>
+                <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbspInstruction</h3><br>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbspGet your blood tests delivered at </p><br>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsphome collect a sample from the  </p><br>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbspyour blood tests.</p><br>
+            </div>
+        </div>
+    </div>
+    <div class="extra"></div>
+    <div class="sixthpart">
+        <div class="sixthpartupper">
+            <div class="sixthpartupperupper">
+                <p style="color: #ef9e48;">PRICING PLAN</p>
+            </div>
+            <div class="sixthpartuppermiddle">
+                <h1>Choose your pricing policy</h1>
+            </div>
+            <div class="sixthpartupperlower">
+                <div class="sixthpartupperlowerdiv">
+                    <div class="sixthpartupperlowerdivleft">
+                        <p>Monthly Plan</p>
+                    </div>
+                    <div class="sixthpartupperlowerdivright">
+                        <p>Annul Plan</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sixthpartlower">
+            <div class="sixthpartlowerleft">
+                <div class="sixthpartlowerleftdiv"></div>
+                <div class="sixthpartlowerleftdiv1">
+                    <div class="sixthpartlowerleftdiv11">
+                        <h3>Free plan</h3>
+                    </div>
+                    <div class="sixthpartlowerleftdiv11">
+                        <p>For Small teams or office</p>
+                    </div>
+                </div>
+                <div class="sixthpartlowerleftdiv">
+                    <img src="./mctcorrect.png" alt="">
+                    <p>Ultimate access to all course, exercises and assessments</p>
+                </div>
+                <div class="sixthpartlowerleftdiv">
+                    <img src="./mctcorrect.png" alt="">
+                    <p>Free acess for all kind of exercise corrections with downloads.</p>
+                </div>
+                <div class="sixthpartlowerleftdiv">
+                    <img src="./mctcorrect.png" alt="">
+                    <p>Total assessment corrections with free download access system</p>
+                </div>
+                <div class="sixthpartlowerleftdiv">
+                    <img src="./mctwrong.png" alt="">
+                    <p>Unlimited download of courses on the mobile app contents</p>
+                </div>
+                <div class="sixthpartlowerleftdiv">
+                    <img src="./mctwrong.png" alt="">
+                    <p>Download and print courses and exercises in PDF</p>
+                </div>
+                <div class="sixthpartlowerleftdiv2">
+                    <div class="sixthpartlowerleftdiv2box">
+                        <p style="color: #ef9e48;">Start free trail</p>
+                    </div>
+                </div>
+            </div>
+            <div class="sixthpartlowerright">
+                <div class="sixthpartlowerleftdiv">
+                    <div class="sixthpartlowerleftdivbox">
+                        <p style="color: white;">Recommended</p>
+                    </div>
+                </div>
+                <div class="sixthpartlowerleftdiv1">
+                    <div class="sixthpartlowerleftdiv11">
+                        <div class="sixthpartlowerleftdiv11right">
+                            <h3>Premium</h3>
+                        </div>
+                        <div class="sixthpartlowerleftdiv11right">
+                            <p>Starting from</p>
+                        </div>
+                    </div>
+                    <div class="sixthpartlowerleftdiv11">
+                        <div class="sixthpartlowerleftdiv11right">
+                            <p>For startup enterprise</p>
+                        </div>
+                        <div class="sixthpartlowerleftdiv11right">
+                            <h3 style="color: #25cb9e;">49.99/mo</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="sixthpartlowerleftdiv">
+                    <img src="./mctcorrect.png" alt="">
+                    <p>Ultimate access to all course, exercises and assessments</p>
+                </div>
+                <div class="sixthpartlowerleftdiv">
+                    <img src="./mctcorrect.png" alt="">
+                    <p>Free acess for all kind of exercise corrections with downloads.</p>
+                </div>
+                <div class="sixthpartlowerleftdiv">
+                    <img src="./mctcorrect.png" alt="">
+                    <p>Total assessment corrections with free download access system</p>
+                </div>
+                <div class="sixthpartlowerleftdiv">
+                    <img src="./mctcorrect.png" alt="">
+                    <p>Unlimited download of courses on the mobile app contents</p>
+                </div>
+                <div class="sixthpartlowerleftdiv">
+                    <img src="./mctcorrect.png" alt="">
+                    <p>Download and print courses and exercises in PDF</p>
+                </div>
+                <div class="sixthpartlowerleftdiv2">
+                    <div class="sixthpartlowerleftdiv2box">
+                        <p style="color: #ef9e48;">Subscribe Now</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="extra"></div>
+    <div class="seventhpart">
+        <div class="seventhpartleft">
+            <img width="80%" height="100%" src="./comp.png" alt="">
+        </div>
+        <div class="seventhpartright">
+            <div class="seventhpartrightdiv">
+                <p style="color: #ef9e48;">FREE TUTORIAL</p>
+            </div>
+            <div class="seventhpartrightdiv">
+                <h1>More than thousand</h1>
+            </div>
+            <div class="seventhpartrightdiv">
+                <h1>of free tutorial upload</h1>
+            </div>
+            <div class="seventhpartrightdiv">
+                <h1>every weeks</h1>
+            </div>
+            <br>
+            <div class="seventhpartrightdiv">
+                <p>Get your tests delivered at let home collect sample</p>
+            </div>
+            <div class="seventhpartrightdiv">
+                <p>from the victory of the managments that supplies</p>
+            </div>
+            <div class="seventhpartrightdiv">
+                <p>best design system  guidelines ever. Get your tests</p>
+            </div>
+            <div class="seventhpartrightdiv">
+                <p>delivered at let home collect sample.</p>
+            </div>
+            <div class="seventhpartrightdiv1">
+                <div class="seventhpartrightdiv1box">
+                    <p style="color: #ef9e48;">Explore details</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="extra"></div>
+    <div class="eighthpart">
+        <div class="eighthpartdiv1 eighthpartdiv1c">
+            <p style="color: #ef9e48;">FREQUENT QUESTION</p>
+        </div>
+        <div class="eighthpartdiv1">
+            <h2>Do you have any question?</h3>
+        </div>
+        <div class="eighthpartdiv"></div>
+        <div class="eighthpartdiv">
+            <i style="color: #3fdbb1;" class="fa fa-plus-circle" aria-hidden="true"></i>
+            &nbsp;&nbsp;<h3>How to contact with riders emergency ?</h3>
+            
+        </div>
+        <div class="eighthpartdiv">
+            <i style="color: #3fdbb1;"  class="fa fa-plus-circle" aria-hidden="true"></i>
+            &nbsp;&nbsp;<h3>App installation failed, how to update system information?</h3>
+        </div>
+        <div class="eighthpartdiv">
+            <i  style="color: #3fdbb1;" class="fa fa-minus-circle" aria-hidden="true"></i>
+            &nbsp;&nbsp;<h3>Website reponse taking time, how to improve?</h3>
+        </div>
+        <div class="eighthpartdivpara">
+            <div class="eighthpartdivpara1">
+                <div class="eighthpartdivpara12">
+                    <p>An FAQ is a list of frequently asked questions (FAQs) and answers on a particular topic (also known as Questions and </p>
+                </div>
+                <div class="eighthpartdivpara12">
+                    <p>Answers [Q&A] or Frequently Asked Questions). The format is often used in articles, websites, email lists, and online </p>
+                </div>
+            </div>
+            <div class="eighthpartdivpara1">
+                <div class="eighthpartdivpara12">
+                    <p>forums where common questions tend to recur, for example through posts or queries by new users related to </p>
+                </div>
+                <div class="eighthpartdivpara12">
+                    <p>common knowledge gaps. The purpose of an FAQ is generally provide information.</p>
+                </div>
+            </div>
+        </div>
+        <div class="eighthpartdiv">
+            <i  style="color: #3fdbb1;" class="fa fa-plus-circle" aria-hidden="true"></i>
+            &nbsp;&nbsp;<h3>New update fixed all bug and issues</h3>
+        </div>
+        <div class="eighthpartdiv"></div>
+        <div class="eighthpartdiv"></div>
+    </div>
+    <div class="ninthpart">
+        <div class="ninthpartupper">
+            <h1>Ready to learn design </h1>
+        </div>
+        <div class="ninthpartmiddle">
+            <h1>with Nia Matos</h1>
+        </div>
+        <div class="ninthpartlower">
+            <div class="ninthpartlowerbox">
+                <p style="color: #ef9e48;">Start Learning Today</p>
+            </div>
+        </div>
+    </div>
+    <div class="extra"></div>
+    <hr><br>
+    <div class="footer">
+        <div class="footerdiv">
+            <div class="footerdivpara">
+                <h3>About us</h3>
+            </div>
+            <div class="footerdivpara"></div>
+            <div class="footerdivpara">
+                <p>Support Center</p>
+            </div>
+            <div class="footerdivpara">
+                <p>Customwe Support</p>
+            </div>
+            <div class="footerdivpara">
+                <p>About Us</p>
+            </div>
+            <div class="footerdivpara">
+                <p>Copyright</p>
+            </div>
+            <div class="footerdivpara">
+                <p>Popular Campaign</p>
+            </div>
+        </div>
+        <div class="footerdiv">
+            <div class="footerdivpara">
+                <h3>Our Information</h3>
+            </div>
+            <div class="footerdivpara"></div>
+            <div class="footerdivpara">
+                <p>Return Policy</p>
+            </div>
+            <div class="footerdivpara">
+                <p>Privacy Policy</p>
+            </div>
+            <div class="footerdivpara">
+                <p>Term & Conditions</p>
+            </div>
+            <div class="footerdivpara">
+                <p>Site Map</p>
+            </div>
+            <div class="footerdivpara">
+                <p>Store Hours</p>
+            </div>
+        </div>
+        <div class="footerdiv">
+            <div class="footerdivpara">
+                <h3>My Account</h3>
+            </div>
+            <div class="footerdivpara"></div>
+            <div class="footerdivpara">
+                <p>Press inquiries</p>
+            </div>
+            <div class="footerdivpara">
+                <p>Social media</p>
+            </div>
+            <div class="footerdivpara">
+                <p>directories</p>
+            </div>
+            <div class="footerdivpara">
+                <p>Image & B-roll</p>
+            </div>
+            <div class="footerdivpara">
+                <p>Permissions</p>
+            </div>
+        </div>
+        <div class="footerdiv">
+            <div class="footerdivpara">
+                <h3>Policy</h3>
+            </div>
+            <div class="footerdivpara"></div>
+            <div class="footerdivpara">
+                <p>Application security</p>
+            </div>
+            <div class="footerdivpara">
+                <p>Software principle</p>
+            </div>
+            <div class="footerdivpara">
+                <p>Unwamted software policy</p>
+            </div>
+            <div class="footerdivpara">
+                <p>Responsible supply chain</p>
+            </div>
+            <div class="footerdivpara"></div>
+        </div>
+    </div>
+</body>
+</html>
